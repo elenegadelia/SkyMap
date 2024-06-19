@@ -1,4 +1,3 @@
-// src/components/flightDetails/FlightDetails.js
 'use client'
 import styles from './FlightDetails.module.css';
 import { useState } from 'react';
@@ -8,7 +7,6 @@ const FlightDetails = () => {
   const [airline, setAirline] = useState('');
 
   const handleTrackFlight = () => {
-    // Add tracking logic here
     console.log(`Tracking flight: ${flightNumber} with airline: ${airline}`);
   };
 

@@ -1,4 +1,3 @@
-// src/app/page.js
 import Head from 'next/head';
 import FlightDetails from './components/flightDetails/FlightDetails';
 import Header from './components/header/Header';
