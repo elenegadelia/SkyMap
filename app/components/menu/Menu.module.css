@@ -1,0 +1,18 @@
+/* src/app/components/Menu.module.css */
+.menu {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  .menu a {
+    color: white !important; /* Make the text white */
+    font-size: 16px;
+    text-decoration: none;
+    padding: 10px;
+  }
+  
+  .menu a:hover {
+    color: #1890ff !important; /* Optional: Keep hover color or set to white */
+  }
+  
