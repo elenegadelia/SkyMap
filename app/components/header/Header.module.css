@@ -1,22 +1,43 @@
+/* app/components/Header.module.css */
 .header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0 20px;
-  }
-  
-  .menu {
-    flex: 1;
-  }
-  
-  .searchContainer {
-    flex: 2;
-    display: flex;
-    justify-content: center;
-  }
-  
-  .search {
-    max-width: 400px;
-    width: 100%;
-  }
-  
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+}
+
+.menu {
+  flex: 1;
+  background: transparent;
+  border: none;
+}
+
+.menu .ant-menu-item {
+  background: transparent;
+  border-bottom: none;
+  transition: background 0.3s;
+  color: white !important; /* Enforce text color */
+}
+
+.menu .ant-menu-item:hover {
+  background: rgba(255, 255, 255, 0.3);
+  border-bottom: none;
+  color: white !important; /* Enforce text color on hover */
+}
+
+.menu .ant-menu-item-selected {
+  background: rgba(255, 255, 255, 0.5);
+  border-bottom: none;
+  color: white !important; /* Enforce text color when selected */
+}
+
+.searchContainer {
+  flex: 2;
+  display: flex;
+  justify-content: center;
+}
+
+.search {
+  max-width: 400px;
+  width: 100%;
+}
