@@ -1,11 +1,9 @@
 "use client";
 
 import React from 'react';
-import { Input, Space, Menu, Dropdown } from 'antd';
-import { SearchOutlined, DownOutlined } from '@ant-design/icons';
-import styles from './Header.module.css';
-
-const { Search } = Input;
+import { Menu, Dropdown, Space } from 'antd';
+import { DownOutlined } from '@ant-design/icons';
+import styles from './Menu.module.css';
 
 const industriesMenu = (
   <Menu>
@@ -61,21 +59,4 @@ const AppMenu = () => {
   );
 };
 
-const Header = () => {
-  return (
-    <div className={styles.header}>
-      <div className={styles.logo}>
-        <img src="/icon.png" alt="Logo" />
-        <span>SkyMap</span>
-      </div>
-      <Search
-        placeholder="Search..."
-        enterButton={<SearchOutlined />}
-        style={{ maxWidth: 400, marginRight: 20 }}
-      />
-      <AppMenu />
-    </div>
-  );
-};
-
-export default Header;
+export default AppMenu;
