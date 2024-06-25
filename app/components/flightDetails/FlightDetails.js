@@ -2,93 +2,55 @@
 
 import { useState } from 'react';
 import styles from './FlightDetails.module.css';
+import { fetchFlightDetails } from '../../services/flightAPI';
 
 const FlightDetails = () => {
   const [flightNumber, setFlightNumber] = useState('');
-  const [airline, setAirline] = useState('');
-  const [departure, setDeparture] = useState('');
-  const [destination, setDestination] = useState('');
-  const [date, setDate] = useState('');
-  const [showDetails, setShowDetails] = useState(false);
-  const [isRouteSearch, setIsRouteSearch] = useState(false);
+  const [flightDetails, setFlightDetails] = useState(null);
+  const [error, setError] = useState('');
 
-  const handleTrackFlight = () => {
-    // Validate inputs here if needed
-    setShowDetails(true);
-  };
-
-  const toggleSearchMode = () => {
-    setIsRouteSearch(!isRouteSearch);
-    setShowDetails(false);
+  const handleTrackFlight = async () => {
+    try {
+      const details = await fetchFlightDetails(flightNumber);
+      setFlightDetails(details);
+      setError('');
+    } catch (err) {
+      setFlightDetails(null);
+      setError('No flight details found or an error occurred.');
+    }
   };
 
   return (
     <div className={styles.flightDetailsContainer}>
       <h2 className={styles.heading}>Flight Details</h2>
-      {!isRouteSearch ? (
-        <>
-          <div className={styles.inputContainer}>
-            <label>Flight:</label>
-            <input
-              type="text"
-              value={flightNumber}
-              onChange={(e) => setFlightNumber(e.target.value)}
-            />
-          </div>
-          <div className={styles.inputContainer}>
-            <label>Airline:</label>
-            <input
-              type="text"
-              value={airline}
-              onChange={(e) => setAirline(e.target.value)}
-            />
-          </div>
-        </>
-      ) : (
-        <>
-          <div className={styles.inputContainer}>
-            <label>Departure:</label>
-            <input
-              type="text"
-              value={departure}
-              onChange={(e) => setDeparture(e.target.value)}
-            />
-          </div>
-          <div className={styles.inputContainer}>
-            <label>Destination:</label>
-            <input
-              type="text"
-              value={destination}
-              onChange={(e) => setDestination(e.target.value)}
-            />
-          </div>
-          <div className={styles.inputContainer}>
-            <label>Date:</label>
-            <input
-              type="date"
-              value={date}
-              onChange={(e) => setDate(e.target.value)}
-            />
-          </div>
-        </>
-      )}
-      <button className={styles.button} onClick={handleTrackFlight}>Track the flight</button>
-      <a className={styles.link} onClick={toggleSearchMode}>
-        {isRouteSearch ? 'Search by Flight' : 'Search by Route'}
+      <div className={styles.inputContainer}>
+        <label>Flight:</label>
+        <input
+          type="text"
+          value={flightNumber}
+          onChange={(e) => setFlightNumber(e.target.value)}
+        />
+      </div>
+      <button className={styles.button} onClick={handleTrackFlight}>
+        Track the flight
+      </button>
+      <a className={styles.link} onClick={() => setFlightDetails(null)}>
+        Search by Route
       </a>
-      {showDetails && !isRouteSearch && (
+      {error && <div className={styles.error}>{error}</div>}
+      {flightDetails && (
         <div className={styles.details}>
           <div className={styles.box}>
-            <strong>Status:</strong> On time
+            <strong>Status:</strong> {flightDetails.status}
           </div>
           <div className={styles.box}>
-            <strong>Duration:</strong> 4
+            <strong>Duration:</strong> {flightDetails.duration} hours
           </div>
           <div className={styles.box}>
-            <strong>Departing:</strong> 6:15 PM 22/10/2024 from Tbilisi (TB)
+            <strong>Departing:</strong> {new Date(flightDetails.departure.time * 1000).toLocaleString()} from {flightDetails.departure.city}
           </div>
           <div className={styles.box}>
-            <strong>Arriving:</strong> 8:15 PM 22/10/2024 at Amsterdam (NL)
+            <strong>Arriving:</strong> {new Date(flightDetails.arrival.time * 1000).toLocaleString()} at {flightDetails.arrival.city}
           </div>
         </div>
       )}
