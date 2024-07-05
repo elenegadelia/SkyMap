@@ -13,7 +13,7 @@ const fetchFlightDetails = async (flightNumber) => {
       throw new Error('No flight details found');
     }
 
-    return response.data.find(flight => flight.flightNumber === flightNumber);
+    return response.data[0]; 
   } catch (error) {
     console.error('Error fetching flight details:', error);
     throw error;
