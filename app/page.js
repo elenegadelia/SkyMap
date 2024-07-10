@@ -1,4 +1,6 @@
+'use client'
 import Head from 'next/head';
+import { useEffect } from 'react';
 import FlightDetails from './components/flightDetails/FlightDetails';
 import Header from './components/header/Header';
 import styles from './page.module.css';
@@ -15,6 +17,39 @@ export default function Home() {
     arrivalTime: '8:15 PM 22/10/2024',
   };
 
+  const posts = [
+    {
+      title: 'Georgian Airways News',
+      description: 'Latest updates and news from Georgian Airways.',
+      date: 'June 25, 2024',
+      link: '#',
+      image: '/images/georgianAirways.jpg', 
+    },
+    {
+      title: 'Lufthansa Safety Measures',
+      description: 'Safety measures implemented by Lufthansa.',
+      date: 'June 20, 2024',
+      link: '#',
+      image: '/images/lufthansa.jpg', 
+    },
+    
+  ];
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const blogContainer = document.querySelector(`.${styles.blogContainer}`);
+      if (blogContainer) {
+        const rect = blogContainer.getBoundingClientRect();
+        if (rect.top < window.innerHeight) {
+          blogContainer.classList.add(styles.visible);
+        }
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
   return (
     <div className={styles.backgroundWrapper}>
       <Head>
@@ -24,7 +59,30 @@ export default function Home() {
       </Head>
       <Header />
       <div className={styles.contentWrapper}>
-        <FlightDetails flight={flight} />
+        <div className={styles.headerContainer}>
+          <div className={styles.headerText}>
+            <h1 className={styles.headerTitle}>SkyMap</h1>
+            <p className={styles.headerSubtitle}>
+              Track your flight, accurate, actionable data and insights that inform every aviation decision.
+            </p>
+          </div>
+          <div className={styles.flightDetailsContainer}>
+            <FlightDetails flight={flight} />
+          </div>
+        </div>
+        <div className={styles.scrollContainer}>
+          <div className={`${styles.blogContainer} ${styles.hidden}`}>
+            {posts.map((post, index) => (
+              <div key={index} className={styles.blogPost}>
+                <img src={post.image} alt={post.title} className={styles.blogImage} />
+                <h2>{post.title}</h2>
+                <p>{post.description}</p>
+                <p>{post.date}</p>
+                <a href={post.link}>Read More</a>
+              </div>
+            ))}
+          </div>
+        </div>
       </div>
     </div>
   );

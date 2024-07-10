@@ -3,7 +3,7 @@
 import React from 'react';
 import { Input, Space, Menu, Dropdown } from 'antd';
 import { SearchOutlined, DownOutlined } from '@ant-design/icons';
-import Link from 'next/link'; 
+import Link from 'next/link';
 import styles from './Header.module.css';
 
 const { Search } = Input;
@@ -11,7 +11,7 @@ const { Search } = Input;
 const industriesMenu = (
   <Menu>
     <Menu.Item key="1">
-      <Link href="./airlines" className={styles.menuItem}>
+      <Link href="/airlines" className={styles.menuItem}>
         Airlines
       </Link>
     </Menu.Item>
@@ -133,10 +133,10 @@ const AppMenu = () => {
 const Header = () => {
   return (
     <div className={styles.header}>
-      <div className={styles.logo}>
+      <Link href="/" className={styles.logo}>
         <img src="/icon.png" alt="Logo" />
         <span>SkyMap</span>
-      </div>
+      </Link>
       <Search
         placeholder="Search..."
         enterButton={<SearchOutlined />}
