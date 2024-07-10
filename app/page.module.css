@@ -60,7 +60,6 @@
   opacity: 1;
 }
 
-
 .blogPost {
   margin-bottom: 20px;
   padding: 20px;
@@ -80,4 +79,142 @@
 .blogPost a {
   color: blue;
   text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+  .headerContainer {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0 5%;
+  }
+
+  .headerTitle {
+    font-size: 32px;
+  }
+
+  .headerSubtitle {
+    font-size: 18px;
+  }
+
+  .flightDetailsContainer {
+    width: 100%;
+    justify-content: flex-start;
+    padding: 20px 0;
+  }
+
+  .flightDetailsContainer form {
+    width: 100%;
+  }
+
+  .blogContainer {
+    margin-top: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .headerTitle {
+    font-size: 28px;
+  }
+
+  .headerSubtitle {
+    font-size: 16px;
+  }
+
+  .flightDetailsContainer {
+    width: 100%;
+    justify-content: flex-start;
+  }
+
+  .flightDetailsContainer form {
+    width: 100%;
+  }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+  .headerContainer {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 5%;
+  }
+
+  .headerTitle {
+    font-size: 36px;
+  }
+
+  .headerSubtitle {
+    font-size: 20px;
+  }
+}
+
+
+@media (max-width: 768px) {
+  .headerContainer {
+    flex-direction: column;
+    align-items: center;
+    padding: 0 5%;
+  }
+
+  .headerText {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+
+  .flightDetailsContainer {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .headerTitle {
+    font-size: 36px;
+  }
+
+  .headerSubtitle {
+    font-size: 18px;
+  }
+
+  .searchBar {
+    width: 100%;
+    max-width: 300px;
+  }
+
+  .menu {
+    display: none; 
+  }
+
+  .burgerMenu {
+    display: block; 
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .headerContainer {
+    flex-direction: column;
+    align-items: center;
+    padding: 0;
+  }
+
+  .headerText, .flightDetailsContainer {
+    width: 100%;
+    text-align: center;
+    margin: 10px 0;
+  }
+
+  .headerTitle {
+    font-size: 32px;
+  }
+
+  .headerSubtitle {
+    font-size: 18px;
+  }
+
+  .flightDetailsContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .ant-input-search {
+    width: 90%;
+  }
 }

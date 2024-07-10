@@ -1,8 +1,8 @@
 "use client";
 
-import React from 'react';
+import React, { useState } from 'react';
 import { Input, Space, Menu, Dropdown } from 'antd';
-import { SearchOutlined, DownOutlined } from '@ant-design/icons';
+import { SearchOutlined, DownOutlined, MenuOutlined, CloseOutlined } from '@ant-design/icons';
 import Link from 'next/link';
 import styles from './Header.module.css';
 
@@ -108,20 +108,49 @@ const aboutUsMenu = (
   </Menu>
 );
 
-const AppMenu = () => {
+const AppMenu = ({ isMobile, menuOpen, toggleMenu }) => {
+  if (isMobile) {
+    return (
+      <>
+        <div className={styles.burgerMenu} onClick={toggleMenu}>
+          {menuOpen ? <CloseOutlined /> : <MenuOutlined />}
+        </div>
+        {menuOpen && (
+          <div className={styles.mobileMenu}>
+            <Dropdown overlay={industriesMenu} trigger={['click']}>
+              <a onClick={(e) => e.preventDefault()} className={styles.menuItem}>
+                Industries <DownOutlined />
+              </a>
+            </Dropdown>
+            <Dropdown overlay={flightTrackingMenu} trigger={['click']}>
+              <a onClick={(e) => e.preventDefault()} className={styles.menuItem}>
+                Flight Tracking <DownOutlined />
+              </a>
+            </Dropdown>
+            <Dropdown overlay={aboutUsMenu} trigger={['click']}>
+              <a onClick={(e) => e.preventDefault()} className={styles.menuItem}>
+                About Us <DownOutlined />
+              </a>
+            </Dropdown>
+          </div>
+        )}
+      </>
+    );
+  }
+
   return (
     <Space className={styles.menu} size="large">
-      <Dropdown overlay={industriesMenu}>
+      <Dropdown overlay={industriesMenu} trigger={['click']}>
         <a onClick={(e) => e.preventDefault()} className={styles.menuItem}>
           Industries <DownOutlined />
         </a>
       </Dropdown>
-      <Dropdown overlay={flightTrackingMenu}>
+      <Dropdown overlay={flightTrackingMenu} trigger={['click']}>
         <a onClick={(e) => e.preventDefault()} className={styles.menuItem}>
           Flight Tracking <DownOutlined />
         </a>
       </Dropdown>
-      <Dropdown overlay={aboutUsMenu}>
+      <Dropdown overlay={aboutUsMenu} trigger={['click']}>
         <a onClick={(e) => e.preventDefault()} className={styles.menuItem}>
           About Us <DownOutlined />
         </a>
@@ -131,6 +160,14 @@ const AppMenu = () => {
 };
 
 const Header = () => {
+  const [menuOpen, setMenuOpen] = useState(false);
+
+  const toggleMenu = () => {
+    setMenuOpen(!menuOpen);
+  };
+
+  const isMobile = typeof window !== 'undefined' && window.innerWidth <= 768;
+
   return (
     <div className={styles.header}>
       <Link href="/" className={styles.logo}>
@@ -141,8 +178,9 @@ const Header = () => {
         placeholder="Search..."
         enterButton={<SearchOutlined />}
         style={{ maxWidth: 400, marginRight: 20 }}
+        className={styles.searchBar}
       />
-      <AppMenu />
+      <AppMenu isMobile={isMobile} menuOpen={menuOpen} toggleMenu={toggleMenu} />
     </div>
   );
 };
