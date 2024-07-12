@@ -6,6 +6,7 @@ import FlightDetails from './components/flightDetails/FlightDetails';
 import Header from './components/header/Header';
 import styles from './page.module.css';
 import AviationTrends from './components/aviationTrends/AviationTrends';
+import RealTimeFlightMap from './components/realTimeFlightMap/RealTimeFlightMap';
 
 export default function Home() {
   const flight = {
@@ -66,7 +67,9 @@ export default function Home() {
           </div>
         </div>
         
+        <RealTimeFlightMap />
         <AviationTrends />
+        
 
         <div className={styles.scrollContainer}>
           <div className={`${styles.blogContainer} ${styles.hidden}`}>

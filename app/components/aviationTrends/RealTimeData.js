@@ -2,7 +2,6 @@ import React from 'react';
 import styles from './AviationTrends.module.css';
 
 const RealTimeData = () => {
-  // Static data sourced from the internet
   const flightActivityChange = 3; 
   const mostFlownAircraft = 'A320'; 
   const busiestAirport = 'ATL'; 
