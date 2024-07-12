@@ -1,10 +1,10 @@
 'use client'
 
-import { useState } from 'react';
+import { useState, forwardRef, useImperativeHandle } from 'react';
 import styles from './FlightDetails.module.css';
-import { fetchFlightDetails } from '..//flightDetails/flightAPI';
+import { fetchFlightDetails } from './flightAPI'; 
 
-const FlightDetails = () => {
+const FlightDetails = forwardRef((props, ref) => {
   const [flightNumber, setFlightNumber] = useState('');
   const [flightDetails, setFlightDetails] = useState(null);
   const [error, setError] = useState(null);
@@ -20,6 +20,22 @@ const FlightDetails = () => {
     }
   };
 
+  useImperativeHandle(ref, () => ({
+    resetState: () => {
+      setFlightNumber('');
+      setFlightDetails(null);
+      setError(null);
+    }
+  }));
+
+  const handleKeyPress = (event) => {
+    if (event.key === 'Enter' && !event.shiftKey) {
+      event.preventDefault();
+      if (!flightNumber.trim()) return; 
+      handleTrackFlight();
+    }
+  };
+
   return (
     <div className={styles.flightDetailsWrapper}>
       <div className={styles.flightDetailsContainer}>
@@ -30,10 +46,15 @@ const FlightDetails = () => {
             type="text"
             value={flightNumber}
             onChange={(e) => setFlightNumber(e.target.value)}
+            onKeyPress={handleKeyPress}
           />
         </div>
-        <button className={styles.button} onClick={handleTrackFlight}>
-        ✈︎ Track the flight
+        <button 
+          className={styles.button} 
+          onClick={handleTrackFlight}
+          disabled={!flightNumber.trim()} 
+        >
+          ✈︎ Track the flight
         </button>
         {error && <div className={styles.error}>{error}</div>}
         {flightDetails && (
@@ -66,7 +87,6 @@ const FlightDetails = () => {
               src="/airplane-icon.png"
               alt="Airplane"
               className={styles.airplane}
-
             />
           </div>
           <div className={styles.city}>{flightDetails.arrival.city}</div>
@@ -74,6 +94,8 @@ const FlightDetails = () => {
       )}
     </div>
   );
-};
+});
+
+FlightDetails.displayName = 'FlightDetails'; 
 
 export default FlightDetails;

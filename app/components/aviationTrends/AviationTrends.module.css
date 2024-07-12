@@ -1,0 +1,46 @@
+.aviationTrends {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 20px;
+  background-color: rgba(255, 255, 255, 0.8);
+  border-radius: 10px;
+  box-sizing: border-box;
+  margin-top: 400px;
+}
+
+.chartSection {
+  flex: 1;
+  margin: 0 10px; 
+}
+
+.currentTraffic, .globalArrivals, .realTimeData {
+  background-color: rgba(255, 255, 255, 0.5); 
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center; 
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; 
+}
+
+.realTimeData h3,
+.realTimeData h4,
+.realTimeData p {
+  width: 100%; 
+  margin: 0; 
+  text-align: center; 
+}
+
+.dataItem {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center; 
+  color: black;
+}
+
+.chartTitle {
+  color: black;
+}
