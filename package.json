@@ -20,7 +20,8 @@
     "react-dom": "^18",
     "react-leaflet": "^4.2.1",
     "react-leaflet-cluster": "^2.1.0",
-    "react-leaflet-markercluster": "^3.0.0-rc1"
+    "react-leaflet-markercluster": "^3.0.0-rc1",
+    "react-lottie": "^1.2.4"
   },
   "devDependencies": {
     "eslint": "^8",

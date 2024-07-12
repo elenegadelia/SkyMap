@@ -8,6 +8,7 @@ import styles from './page.module.css';
 import AviationTrends from './components/aviationTrends/AviationTrends';
 import RealTimeFlightMap from './components/realTimeFlightMap/RealTimeFlightMap';
 
+
 export default function Home() {
   const flight = {
     departure: 'Tbilisi (TB)',
