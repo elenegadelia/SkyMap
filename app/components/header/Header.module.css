@@ -7,17 +7,43 @@
   width: 100%;
 }
 
+.logoContainer {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  text-decoration: none;
+  color: white;
+}
+
 .logo {
   display: flex;
   align-items: center;
-  margin-right: 20px;
-  color: white;
-  text-decoration: none;
+  margin-right: 10px;
+  width: 45px;
 }
 
 .logo img {
   height: 40px;
   margin-right: 10px;
+}
+
+.logoText {
+  font-size: 24px;
+  color: white;
+  text-decoration: none;
+  margin-right: 15px;
+}
+
+.logoText a {
+  text-decoration: none;
+  color: white;
+}
+
+.logoText a:hover,
+.logoText a:focus,
+.logoText a:visited {
+  color: white;
+  text-decoration: none;
 }
 
 .menu {

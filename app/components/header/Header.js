@@ -11,28 +11,28 @@ const { Search } = Input;
 const industriesMenu = (
   <Menu>
     <Menu.Item key="1">
-      <Link href="/airlines" className={styles.menuItem}>
-        Airlines
+      <Link href="./airlines" legacyBehavior>
+        <a className={styles.menuItem}>Airlines</a>
       </Link>
     </Menu.Item>
     <Menu.Item key="2">
-      <Link href="/airports" className={styles.menuItem}>
-        Airports
+      <Link href="/airports" legacyBehavior>
+        <a className={styles.menuItem}>Airports</a>
       </Link>
     </Menu.Item>
     <Menu.Item key="3">
-      <Link href="/air-traffic-control" className={styles.menuItem}>
-        Air Traffic Control
+      <Link href="/air-traffic-control" legacyBehavior>
+        <a className={styles.menuItem}>Air Traffic Control</a>
       </Link>
     </Menu.Item>
     <Menu.Item key="4">
-      <Link href="/owners-operators" className={styles.menuItem}>
-        Owners and Operators
+      <Link href="/owners-operators" legacyBehavior>
+        <a className={styles.menuItem}>Owners and Operators</a>
       </Link>
     </Menu.Item>
     <Menu.Item key="5">
-      <Link href="/government" className={styles.menuItem}>
-        Government
+      <Link href="/government" legacyBehavior>
+        <a className={styles.menuItem}>Government</a>
       </Link>
     </Menu.Item>
   </Menu>
@@ -41,18 +41,18 @@ const industriesMenu = (
 const flightTrackingMenu = (
   <Menu>
     <Menu.Item key="1">
-      <Link href="/delays-cancellations" className={styles.menuItem}>
-        Delays and Cancellations
+      <Link href="/delays-cancellations" legacyBehavior>
+        <a className={styles.menuItem}>Delays and Cancellations</a>
       </Link>
     </Menu.Item>
     <Menu.Item key="2">
-      <Link href="/search-flights" className={styles.menuItem}>
-        Search Flights
+      <Link href="/search-flights" legacyBehavior>
+        <a className={styles.menuItem}>Search Flights</a>
       </Link>
     </Menu.Item>
     <Menu.Item key="3">
-      <Link href="/other" className={styles.menuItem}>
-        Other
+      <Link href="/other" legacyBehavior>
+        <a className={styles.menuItem}>Other</a>
       </Link>
     </Menu.Item>
   </Menu>
@@ -61,48 +61,48 @@ const flightTrackingMenu = (
 const aboutUsMenu = (
   <Menu>
     <Menu.Item key="1">
-      <Link href="/about" className={styles.menuItem}>
-        About
+      <Link href="/about" legacyBehavior>
+        <a className={styles.menuItem}>About</a>
       </Link>
     </Menu.Item>
     <Menu.Item key="2">
-      <Link href="/careers" className={styles.menuItem}>
-        Careers
+      <Link href="/careers" legacyBehavior>
+        <a className={styles.menuItem}>Careers</a>
       </Link>
     </Menu.Item>
     <Menu.Item key="3">
-      <Link href="/history" className={styles.menuItem}>
-        History
+      <Link href="/history" legacyBehavior>
+        <a className={styles.menuItem}>History</a>
       </Link>
     </Menu.Item>
     <Menu.Item key="4">
-      <Link href="/executive-team" className={styles.menuItem}>
-        Executive Team
+      <Link href="/executive-team" legacyBehavior>
+        <a className={styles.menuItem}>Executive Team</a>
       </Link>
     </Menu.Item>
     <Menu.Item key="5">
-      <Link href="/blog" className={styles.menuItem}>
-        Blog
+      <Link href="/blog" legacyBehavior>
+        <a className={styles.menuItem}>Blog</a>
       </Link>
     </Menu.Item>
     <Menu.Item key="6">
-      <Link href="/webinars" className={styles.menuItem}>
-        Webinars
+      <Link href="/webinars" legacyBehavior>
+        <a className={styles.menuItem}>Webinars</a>
       </Link>
     </Menu.Item>
     <Menu.Item key="7">
-      <Link href="/advertise" className={styles.menuItem}>
-        Advertise with Us
+      <Link href="/advertise" legacyBehavior>
+        <a className={styles.menuItem}>Advertise with Us</a>
       </Link>
     </Menu.Item>
     <Menu.Item key="8">
-      <Link href="/faqs" className={styles.menuItem}>
-        FAQs
+      <Link href="/faqs" legacyBehavior>
+        <a className={styles.menuItem}>FAQs</a>
       </Link>
     </Menu.Item>
     <Menu.Item key="9">
-      <Link href="/contact" className={styles.menuItem}>
-        Contact Us
+      <Link href="/contact" legacyBehavior>
+        <a className={styles.menuItem}>Contact Us</a>
       </Link>
     </Menu.Item>
   </Menu>
@@ -170,10 +170,12 @@ const Header = ({ onLogoClick }) => {
 
   return (
     <div className={styles.header}>
-      <div className={styles.logo} onClick={onLogoClick} style={{ cursor: 'pointer' }}>
-        <img src="/icon.png" alt="Logo" />
-        <span>SkyMap</span>
-      </div>
+      <Link href="/" legacyBehavior>
+        <a onClick={onLogoClick} className={styles.logoContainer} style={{ cursor: 'pointer', textDecoration: 'none' }}>
+          <img src="/icon.png" alt="Logo" className={styles.logo} />
+          <span className={styles.logoText}>SkyMap</span>
+        </a>
+      </Link>
       <Search
         placeholder="Search..."
         enterButton={<SearchOutlined />}
