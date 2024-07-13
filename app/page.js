@@ -6,7 +6,9 @@ import FlightDetails from './components/flightDetails/FlightDetails';
 import Header from './components/header/Header';
 import styles from './page.module.css';
 import AviationTrends from './components/aviationTrends/AviationTrends';
-import RealTimeFlightMap from './components/realTimeFlightMap/RealTimeFlightMap';
+import dynamic from 'next/dynamic';
+
+const RealTimeFlightMap = dynamic(() => import('./components/realTimeFlightMap/RealTimeFlightMap'), { ssr: false });
 
 export default function Home() {
   const flightDetailsRef = useRef();

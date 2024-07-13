@@ -39,12 +39,18 @@ const generateFakeFlights = (num) => {
 
 const RealTimeFlightMap = () => {
     const [flights, setFlights] = useState([]);
+    const [isClient, setIsClient] = useState(false);
   
     useEffect(() => {
+      setIsClient(true);
       const fakeFlights = generateFakeFlights(100);
       setFlights(fakeFlights);
     }, []);
   
+    if (!isClient) {
+      return null;
+    }
+
     return (
       <div className={styles.mapContainer}>
         <div className={styles.headerText}>
@@ -58,17 +64,16 @@ const RealTimeFlightMap = () => {
             url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
             attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
           />
-          {flights
-            .map((flight, index) => (
-              <Marker key={index} position={[flight.lat, flight.lon]} icon={planeIcon}>
-                <Popup>
-                  <div>
-                    <strong>From:</strong> {flight.from}, {flight.fromCountry}<br />
-                    <strong>To:</strong> {flight.to}, {flight.toCountry}
-                  </div>
-                </Popup>
-              </Marker>
-            ))}
+          {flights.map((flight, index) => (
+            <Marker key={index} position={[flight.lat, flight.lon]} icon={planeIcon}>
+              <Popup>
+                <div>
+                  <strong>From:</strong> {flight.from}, {flight.fromCountry}<br />
+                  <strong>To:</strong> {flight.to}, {flight.toCountry}
+                </div>
+              </Popup>
+            </Marker>
+          ))}
         </MapContainer>
       </div>
     );
