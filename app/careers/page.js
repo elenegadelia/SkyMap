@@ -59,12 +59,12 @@ const Careers = () => {
             <p>
               We’re looking for the brightest, most innovative minds to help build a more connected world. Discover how your skills can help us better the world we share and discover the never-before.
             </p>
+            <p>
+              At SkyMap, we believe in fostering a collaborative environment where your ideas can thrive. We offer opportunities for growth, development, and making a real impact. Join us to be part of a dynamic team that values creativity, passion, and excellence.
+            </p>
             <div className={styles.joinUsContainer}>
               <Link href="/careers-search/skymap" legacyBehavior>
                 <a className={styles.careerButton}>Search SkyMap Careers</a>
-              </Link>
-              <Link href="/careers-search/aviation-solutions" legacyBehavior>
-                <a className={styles.careerButton}>Search Connected Aviation Solutions Careers</a>
               </Link>
             </div>
           </div>
