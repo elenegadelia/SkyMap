@@ -1,0 +1,114 @@
+.pageWrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+    background-color: rgb(6, 6, 68);
+    background-size: cover;
+    background-position: center;
+}
+
+.header {
+    width: 100%;
+}
+
+.content {
+    width: 100%;
+    padding: 50px;
+    background-color: white;
+    text-align: left;
+}
+
+.backLink {
+    display: inline-block;
+    margin-bottom: 20px;
+    color: #0073e6;
+    text-decoration: none;
+    font-size: 1em;
+}
+
+.backLink:hover {
+    text-decoration: underline;
+}
+
+.mainHeading {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+.date {
+    font-size: 1em;
+    color: gray;
+    margin-bottom: 20px;
+}
+
+.article {
+    font-size: 1em;
+    line-height: 1.5;
+    margin-bottom: 40px;
+}
+
+.article a {
+    color: #0073e6;
+    text-decoration: none;
+}
+
+.article a:hover {
+    text-decoration: underline;
+}
+
+.migrationButton {
+    display: inline-block;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding: 10px 20px;
+    background-color: #0073e6;
+    color: white;
+    border-radius: 5px;
+    text-decoration: none;
+}
+
+.migrationButton:hover {
+    background-color: #005bb5;
+}
+
+.contactSection {
+    display: flex;
+    justify-content: left;
+    gap: 20px;
+    background-color: white;
+    padding: 20px 0;
+    width: 100%;
+    margin: 0; 
+    padding-bottom: 0;
+}
+
+.contactBox {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    width: 300px;
+}
+
+.contactBox h3 {
+    margin-bottom: 10px;
+    font-size: 1.2em;
+}
+
+.contactBox p {
+    margin-bottom: 10px;
+    font-size: 1em;
+}
+
+.contactBox a {
+    display: inline-block;
+    margin-top: 10px;
+    color: #0073e6;
+    text-decoration: none;
+}
+
+.contactBox a:hover {
+    text-decoration: underline;
+}
