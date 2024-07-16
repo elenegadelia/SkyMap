@@ -1,4 +1,4 @@
-'use client';
+"use client";
 
 import Head from 'next/head';
 import { useRef } from 'react';
@@ -8,37 +8,7 @@ import styles from './page.module.css';
 import AviationTrends from './components/aviationTrends/AviationTrends';
 import RealTimeFlightMap from './components/realTimeFlightMap/RealTimeFlightMap';
 
-
 export default function Home() {
-  const flight = {
-    departure: 'Tbilisi (TB)',
-    arrival: 'Amsterdam (NL)',
-    number: 'BT 618',
-    airline: 'Air Canada',
-    status: 'On time',
-    duration: '4',
-    departureTime: '6:15 PM 22/10/2024',
-    arrivalTime: '8:15 PM 22/10/2024',
-  };
-
-  const posts = [
-    {
-      title: 'Georgian Airways News',
-      description: 'Latest updates and news from Georgian Airways.',
-      date: 'June 25, 2024',
-      link: '#',
-      image: '/images/georgianAirways.jpg', 
-    },
-    {
-      title: 'Lufthansa Safety Measures',
-      description: 'Safety measures implemented by Lufthansa.',
-      date: 'June 20, 2024',
-      link: '#',
-      image: '/images/lufthansa.jpg', 
-    },
-    
-  ];
-
   const flightDetailsRef = useRef();
 
   const handleLogoClick = () => {
@@ -70,21 +40,6 @@ export default function Home() {
         
         <RealTimeFlightMap />
         <AviationTrends />
-        
-
-        <div className={styles.scrollContainer}>
-          <div className={`${styles.blogContainer} ${styles.hidden}`}>
-            {posts.map((post, index) => (
-              <div key={index} className={styles.blogPost}>
-                <img src={post.image} alt={post.title} className={styles.blogImage} />
-                <h2>{post.title}</h2>
-                <p>{post.description}</p>
-                <p>{post.date}</p>
-                <a href={post.link}>Read More</a>
-              </div>
-            ))}
-          </div>
-        </div>
       </div>
     </div>
   );

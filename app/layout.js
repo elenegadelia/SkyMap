@@ -2,6 +2,7 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import "antd/dist/reset.css";
 import Head from 'next/head';
+import Footer from './components/footer/Footer';
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -14,21 +15,13 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <Head>
-        <link
-          rel="stylesheet"
-          href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-          integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ775PRi9jTs5RHeCZvF5nRJ1XUbbM6P9ZZ+"
-          crossOrigin="anonymous"
-        />
-        <script
-          src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-          integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
-          crossOrigin="anonymous"
-          async
-        ></script>
+        
       </Head>
       <body className={inter.className}>
-        {children}
+        <div className="main-content">
+          {children}
+        </div>
+        <Footer />
       </body>
     </html>
   );
