@@ -1,13 +1,14 @@
 .container {
   display: flex;
   justify-content: center; 
-  margin-top: 50px;
+  margin-top: 30px;
 }
 
 .flightDetailsWrapper {
   display: flex;
   flex-direction: column; 
   margin-right: 20px; 
+  align-items: center;
 }
 
 .flightDetailsContainer {
@@ -15,7 +16,6 @@
   padding: 20px;
   border-radius: 10px;
   width: 300px; 
-  margin-right: 100px;
 }
 
 .heading {
@@ -26,6 +26,23 @@
 .inputContainer {
   margin-bottom: 15px;
   color: black;
+}
+
+.inputContainer input {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  margin-bottom: 10px; 
+  height: 45px;
+}
+
+.routeInput {
+  margin-top: 10px; 
+}
+
+.inputWrapper {
+  margin-bottom: 10px; 
 }
 
 .inputContainer label {
@@ -39,6 +56,28 @@
   padding: 8px;
   border: 1px solid #ccc;
   border-radius: 3px;
+  position: relative;
+}
+
+.suggestions {
+  background-color: white;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  width: 100%;
+  z-index: 1;
+}
+
+.suggestions li {
+  padding: 8px;
+  cursor: pointer;
+}
+
+.suggestions li:hover {
+  background-color: #f0f0f0;
 }
 
 .button {
@@ -57,15 +96,20 @@
 
 .link {
   display: block;
-  margin-top: 15px;
-  text-align: center;
-  color: #1890ff;
+  margin-top: 1px;
+  text-align: left;
+  color: white;
   cursor: pointer;
+  text-decoration: underline;
 }
 
 .details {
   margin-top: 20px;
   color: black;
+}
+
+.details h2 {
+  color: white;
 }
 
 .box {
@@ -83,7 +127,8 @@
 
 .mapWrapper {
   width: 500px; 
-  height: 400px; 
+  height: 300px; 
+  margin-top: 20px; 
 }
 
 .boxTitle {
