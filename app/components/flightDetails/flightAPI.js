@@ -2,18 +2,15 @@ import axios from 'axios';
 
 const fetchFlightDetails = async (flightNumber) => {
   try {
-    const response = await axios.get('https://667a89c2bd627f0dcc8f6b3b.mockapi.io/api/v1/flights', {
-      params: { flightNumber },
-      headers: {
-        'Content-Type': 'application/json',
-      },
-    });
+    const response = await axios.get('/flights.json'); 
+    const flights = response.data;
 
-    if (!response.data.length) {
+    const flightDetails = flights[flightNumber];
+    if (!flightDetails) {
       throw new Error('No flight details found');
     }
 
-    return response.data[0]; 
+    return flightDetails; 
   } catch (error) {
     console.error('Error fetching flight details:', error);
     throw error;

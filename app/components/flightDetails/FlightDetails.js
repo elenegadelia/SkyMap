@@ -1,8 +1,9 @@
-'use client'
+'use client';
 
 import { useState, forwardRef, useImperativeHandle } from 'react';
 import styles from './FlightDetails.module.css';
 import { fetchFlightDetails } from './flightAPI'; 
+import FlightMap from './FlightMap';
 
 const FlightDetails = forwardRef((props, ref) => {
   const [flightNumber, setFlightNumber] = useState('');
@@ -14,6 +15,7 @@ const FlightDetails = forwardRef((props, ref) => {
       const details = await fetchFlightDetails(flightNumber);
       setFlightDetails(details);
       setError(null);
+      setFlightNumber(''); 
     } catch (error) {
       setError('No flight details found or an error occurred.');
       setFlightDetails(null);
@@ -37,59 +39,59 @@ const FlightDetails = forwardRef((props, ref) => {
   };
 
   return (
-    <div className={styles.flightDetailsWrapper}>
-      <div className={styles.flightDetailsContainer}>
-        <h2 className={styles.heading}>Flight Details</h2>
-        <div className={styles.inputContainer}>
-          <label>Flight:</label>
-          <input
-            type="text"
-            value={flightNumber}
-            onChange={(e) => setFlightNumber(e.target.value)}
-            onKeyPress={handleKeyPress}
-          />
-        </div>
-        <button 
-          className={styles.button} 
-          onClick={handleTrackFlight}
-          disabled={!flightNumber.trim()} 
-        >
-          ✈︎ Track the flight
-        </button>
-        {error && <div className={styles.error}>{error}</div>}
-        {flightDetails && (
-          <div className={styles.details}>
-            <div className={styles.box}>
-              <strong>Status:</strong> {flightDetails.status}
-            </div>
-            <div className={styles.box}>
-              <strong>Duration:</strong> {flightDetails.duration} hours
-            </div>
-            <div className={styles.box}>
-              <strong>Departing:</strong>{' '}
-              {new Date(flightDetails.departure.time * 1000).toLocaleString()} from{' '}
-              {flightDetails.departure.city}
-            </div>
-            <div className={styles.box}>
-              <strong>Arriving:</strong>{' '}
-              {new Date(flightDetails.arrival.time * 1000).toLocaleString()} at{' '}
-              {flightDetails.arrival.city}
-            </div>
-          </div>
-        )}
-      </div>
-      {flightDetails && (
-        <div className={styles.flightPathContainer}>
-          <div className={styles.city}>{flightDetails.departure.city}</div>
-          <div className={styles.arcContainer}>
-            <div className={styles.arc}></div>
-            <img
-              src="/airplane-icon.png"
-              alt="Airplane"
-              className={styles.airplane}
+    <div className={styles.container}>
+      <div className={styles.flightDetailsWrapper}>
+        <div className={styles.flightDetailsContainer}>
+          <h2 className={styles.heading}>Flight Details</h2>
+          <div className={styles.inputContainer}>
+            <label>Flight Number:</label>
+            <input
+              type="text"
+              value={flightNumber}
+              onChange={(e) => setFlightNumber(e.target.value)}
+              onKeyPress={handleKeyPress}
             />
           </div>
-          <div className={styles.city}>{flightDetails.arrival.city}</div>
+          <button 
+            className={styles.button} 
+            onClick={handleTrackFlight}
+            disabled={!flightNumber.trim()} 
+          >
+            ✈︎ Track the flight
+          </button>
+          {error && <div className={styles.error}>{error}</div>}
+          {flightDetails && (
+            <div className={styles.details}>
+              <div className={styles.box}>
+                <div className={styles.boxTitle}>Status</div>
+                {flightDetails.status}
+              </div>
+              <div className={styles.box}>
+                <div className={styles.boxTitle}>Duration</div>
+                {flightDetails.duration} hours
+              </div>
+              <div className={styles.box}>
+                <div className={styles.boxTitle}>Departing</div>
+                {new Date(flightDetails.departure.time * 1000).toLocaleString()} from{' '}
+                {flightDetails.departure.city}
+              </div>
+              <div className={styles.box}>
+                <div className={styles.boxTitle}>Arriving</div>
+                {new Date(flightDetails.arrival.time * 1000).toLocaleString()} at{' '}
+                {flightDetails.arrival.city}
+              </div>
+            </div>
+          )}
+        </div>
+      </div>
+      {flightDetails && (
+        <div className={styles.mapWrapper}>
+          <FlightMap 
+            departureLat={flightDetails.departure.lat}
+            departureLng={flightDetails.departure.lng}
+            arrivalLat={flightDetails.arrival.lat}
+            arrivalLng={flightDetails.arrival.lng}
+          />
         </div>
       )}
     </div>
