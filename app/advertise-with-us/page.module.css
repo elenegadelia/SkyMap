@@ -1,0 +1,128 @@
+.pageWrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+    background-image: url('/background.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+.header {
+    width: 100%;
+}
+
+.topSection {
+    text-align: center;
+    padding: 50px 0;
+    background-color: white;
+    width: 100%;
+}
+
+.imageAndText {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.laptopImage {
+    width: 400px;
+    height: auto;
+    border-radius: 10px;
+}
+
+.advertiseText {
+    max-width: 500px;
+}
+
+.advertiseText p {
+    font-size: 1.5em;
+    margin-bottom: 20px;
+}
+
+.advertiseText a {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #0073e6;
+    color: white;
+    border-radius: 5px;
+    text-decoration: none;
+}
+
+.advertiseText a:hover {
+    background-color: #005bb5;
+}
+
+.contactInfo {
+    margin-top: 20px;
+    font-size: 1.2em;
+    color: #555;
+}
+
+.statsSection {
+    width: 100%;
+    background-color: #f7f7f7;
+    padding: 50px 0;
+}
+
+.statsSection h2 {
+    text-align: center;
+    font-size: 2.5em;
+    margin-bottom: 40px;
+}
+
+.statsGrid {
+    display: table;
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+    background: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.statItem, .subHeader {
+    display: table-row;
+}
+
+.statItem {
+    background-color: white;
+}
+
+.statItem h3, .subHeader h3 {
+    display: table-cell;
+    padding: 15px;
+    border-bottom: 1px solid #ddd;
+    text-align: left;
+    font-size: 1.2em;
+}
+
+.statItem p {
+    display: table-cell;
+    padding: 15px;
+    border-bottom: 1px solid #ddd;
+    text-align: right;
+    font-size: 1em;
+    color: #555;
+}
+
+.subHeader {
+    background-color: #003366;
+    color: white;
+    text-align: center;
+    font-size: 1.2em;
+}
+
+.subHeader h3 {
+    padding: 20px;
+    border-bottom: none;
+}
+
+.sources {
+    text-align: center;
+    font-size: 0.9em;
+    color: #555;
+    margin-top: 20px;
+}
