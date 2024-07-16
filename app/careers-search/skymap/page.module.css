@@ -1,0 +1,260 @@
+.pageWrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+    background-image: url('/background.jpg'); 
+    background-size: cover;
+    background-position: center;
+}
+
+.header {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+.imageContainer {
+    width: 100%;
+    max-width: 500px; 
+    height: auto;
+    margin-top: 2px;
+    overflow: hidden; 
+}
+
+.careersImage {
+    width: 100%;
+    height: auto;
+    object-fit: contain; 
+}
+
+.title {
+    padding: 20px;
+    background-color: white;
+    text-align: center;
+    width: 100%;
+}
+
+.title h1 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+.searchBox {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.searchInput {
+    padding: 10px;
+    font-size: 1em;
+    width: 300px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.searchButton {
+    padding: 10px 20px;
+    font-size: 1em;
+    background-color: red;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.searchButton:hover {
+    background-color: darkred;
+}
+
+.results {
+    padding: 20px;
+    width: 75%; 
+}
+
+.content {
+    display: flex;
+    width: 100%;
+    background-color: #fff;
+}
+
+.filter {
+    width: 25%;
+    padding: 20px;
+    background-color: #f0f0f0;
+    border-right: 1px solid #ddd;
+    border-radius: 3px;
+    margin-left: 100px;
+    margin-right: 50px;
+    margin-bottom: 80px;
+}
+
+.filter h2 {
+    margin-bottom: 20px;
+}
+
+.filterSection {
+    margin-bottom: 15px;
+}
+
+.filterSection h3 {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.filterSection h3:hover {
+    background-color: #f5f5f5;
+}
+
+.filterOptions {
+    margin-top: 10px;
+    padding-left: 20px;
+}
+
+.filterOption {
+    padding: 10px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-bottom: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.filterOption:hover {
+    background-color: #f5f5f5;
+}
+
+.selected {
+    background-color: #f5f5f5;
+    font-weight: bold;
+}
+
+.selectedFilters {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.selectedFilter {
+    background-color: #e0e0e0;
+    padding: 5px 10px;
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.selectedFilter span {
+    cursor: pointer;
+}
+
+.clearFiltersButton {
+    background-color: blue;
+    color: white;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-left: 10px;
+}
+
+.clearFiltersButton:hover {
+    background-color: rgb(29, 29, 128);
+}
+
+.job {
+    background-color: #fff;
+    padding: 20px;
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.job h2 {
+    margin-bottom: 10px;
+    font-size: 1.5em;
+    color: rgb(49, 49, 173);
+}
+
+.job p {
+    margin-bottom: 5px;
+    color: #333;
+}
+
+.job p:first-of-type {
+    font-weight: bold;
+}
+
+.applyButton {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: blue;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+    border: none; 
+    outline: none; 
+}
+
+.applyButton:hover {
+    background-color: rgb(29, 29, 128);
+}
+
+
+
+.pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.pageItem {
+    width: 40px; 
+    height: 40px; 
+    margin: 0 5px;
+    border: 1px solid #ddd;
+    border-radius: 50%; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.pageItem:hover {
+    background-color: #f5f5f5;
+}
+
+.activePage {
+    background-color: rgb(69, 69, 205);
+    color: white;
+    font-weight: bold;
+    border: none;
+}
+
+.activePage:hover {
+    background-color: rgb(34, 34, 120);
+}
+
+.results {
+    max-width: 800px;
+}
