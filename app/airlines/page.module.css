@@ -1,0 +1,52 @@
+.container {
+  width: 90%;
+  margin: 0 auto;
+}
+
+.post {
+  background-color: rgba(255, 255, 255, 0.9); 
+  overflow: hidden;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.postImage {
+  width: 50%;
+  height: auto;
+  display: block;
+}
+
+.postContent {
+  padding: 20px; 
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.postTitle {
+  font-size: 1.5rem;
+  margin-bottom: 10px; 
+}
+
+.postDescription {
+  font-size: 1rem;
+  color: #555;
+  white-space: pre-line; 
+}
+
+.date {
+  font-size: 0.8rem;
+  color: #999;
+  margin-bottom: 10px; 
+}
+
+.pageTitle {
+  color: white; 
+  text-align: center; 
+  margin-bottom: 20px; 
+}
+

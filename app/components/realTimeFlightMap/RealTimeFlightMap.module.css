@@ -1,0 +1,47 @@
+.mapWrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 400px; 
+}
+
+.mapContainer {
+  width: 80%; 
+  height: 500px; 
+  border-radius: 15px; 
+  overflow: hidden; 
+  background-color: white; 
+  margin: 200px auto 0; 
+  display: flex; 
+  justify-content: center;
+  align-items: center; 
+  flex-direction: column; 
+}
+
+.headerText {
+  margin-top: 10px;
+  text-align: center; 
+  color: black;
+  font-weight: bold;
+}
+
+.paragraphText {
+  font-size: 14px; 
+  color: black; 
+  text-align: center; 
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+.map {
+  width: 100%;
+  height: 100%;
+  border-radius: 15px;
+}
+
+.leaflet-div-icon {
+  color: orange;
+  font-size: 24px;
+  background: none;
+  border: none;
+}
