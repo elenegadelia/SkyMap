@@ -32,7 +32,9 @@ export default function Home() {
           <div className={styles.headerText}>
             <h1 className={styles.headerTitle}>SkyMap</h1>
             <p className={styles.headerSubtitle}>
-              Track your flight, accurate, actionable data and insights that inform every aviation decision.
+              Track your flight, accurate, <br /> 
+              actionable data and insights <br /> 
+              that inform every aviation decision.
             </p>
           </div>
           <div className={styles.flightDetailsContainer}>
