@@ -140,19 +140,19 @@ const AppMenu = ({ isMobile, menuOpen, toggleMenu }) => {
 
   return (
     <Space className={styles.menu} size="large">
-      <Dropdown overlay={industriesMenu} trigger={["click"]}>
+      <Dropdown overlay={industriesMenu} trigger={["hover"]}>
         <a onClick={(e) => e.preventDefault()} className={styles.menuItem}>
-          Industries <DownOutlined />
+          Industries <DownOutlined className={styles.arrowIcon} />
         </a>
       </Dropdown>
-      <Dropdown overlay={flightTrackingMenu} trigger={["click"]}>
+      <Dropdown overlay={flightTrackingMenu} trigger={["hover"]}>
         <a onClick={(e) => e.preventDefault()} className={styles.menuItem}>
-          Flight Tracking <DownOutlined />
+          Flight Tracking <DownOutlined className={styles.arrowIcon} />
         </a>
       </Dropdown>
-      <Dropdown overlay={aboutUsMenu} trigger={["click"]}>
+      <Dropdown overlay={aboutUsMenu} trigger={["hover"]}>
         <a onClick={(e) => e.preventDefault()} className={styles.menuItem}>
-          About Us <DownOutlined />
+          About Us <DownOutlined className={styles.arrowIcon} />
         </a>
       </Dropdown>
     </Space>
