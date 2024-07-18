@@ -36,13 +36,13 @@ const flightTrackingMenu = (
       </Link>
     </Menu.Item>
     <Menu.Item key="2">
-      <Link href="/search-flights" legacyBehavior>
-        <a className={styles.menuItem}>Search Flights</a>
+      <Link href="/weather" legacyBehavior>
+        <a className={styles.menuItem}>Weather</a>
       </Link>
     </Menu.Item>
     <Menu.Item key="3">
-      <Link href="/other" legacyBehavior>
-        <a className={styles.menuItem}>Other</a>
+      <Link href="/baggage" legacyBehavior>
+        <a className={styles.menuItem}>Baggage Information</a>
       </Link>
     </Menu.Item>
   </Menu>
