@@ -1,0 +1,282 @@
+[
+    {
+        "airline": "American Airlines",
+        "cancellations_percentage": 17.74,
+        "delays_percentage": 8.49,
+        "cancellations_number": 177,
+        "delays_number": 265
+    },
+    {
+        "airline": "Delta Air Lines",
+        "cancellations_percentage": 19.11,
+        "delays_percentage": 13.6,
+        "cancellations_number": 53,
+        "delays_number": 390
+    },
+    {
+        "airline": "United Airlines",
+        "cancellations_percentage": 10.85,
+        "delays_percentage": 8.91,
+        "cancellations_number": 88,
+        "delays_number": 1297
+    },
+    {
+        "airline": "Southwest Airlines",
+        "cancellations_percentage": 18.94,
+        "delays_percentage": 14.4,
+        "cancellations_number": 101,
+        "delays_number": 1862
+    },
+    {
+        "airline": "JetBlue Airways",
+        "cancellations_percentage": 1.71,
+        "delays_percentage": 10.6,
+        "cancellations_number": 125,
+        "delays_number": 1908
+    },
+    {
+        "airline": "Alaska Airlines",
+        "cancellations_percentage": 1.78,
+        "delays_percentage": 6.42,
+        "cancellations_number": 147,
+        "delays_number": 1905
+    },
+    {
+        "airline": "Spirit Airlines",
+        "cancellations_percentage": 6.7,
+        "delays_percentage": 0.25,
+        "cancellations_number": 132,
+        "delays_number": 501
+    },
+    {
+        "airline": "Frontier Airlines",
+        "cancellations_percentage": 1.28,
+        "delays_percentage": 4.24,
+        "cancellations_number": 123,
+        "delays_number": 9
+    },
+    {
+        "airline": "Hawaiian Airlines",
+        "cancellations_percentage": 14.53,
+        "delays_percentage": 10.45,
+        "cancellations_number": 165,
+        "delays_number": 1327
+    },
+    {
+        "airline": "Allegiant Air",
+        "cancellations_percentage": 1.49,
+        "delays_percentage": 18.82,
+        "cancellations_number": 165,
+        "delays_number": 413
+    },
+    {
+        "airline": "British Airways",
+        "cancellations_percentage": 16.92,
+        "delays_percentage": 15.53,
+        "cancellations_number": 2,
+        "delays_number": 773
+    },
+    {
+        "airline": "Lufthansa",
+        "cancellations_percentage": 12.67,
+        "delays_percentage": 3.24,
+        "cancellations_number": 109,
+        "delays_number": 1468
+    },
+    {
+        "airline": "Air France",
+        "cancellations_percentage": 10.14,
+        "delays_percentage": 18.82,
+        "cancellations_number": 75,
+        "delays_number": 335
+    },
+    {
+        "airline": "KLM Royal Dutch Airlines",
+        "cancellations_percentage": 1.4,
+        "delays_percentage": 2.57,
+        "cancellations_number": 56,
+        "delays_number": 1359
+    },
+    {
+        "airline": "Qatar Airways",
+        "cancellations_percentage": 17.93,
+        "delays_percentage": 19.74,
+        "cancellations_number": 127,
+        "delays_number": 175
+    },
+    {
+        "airline": "Emirates",
+        "cancellations_percentage": 5.98,
+        "delays_percentage": 11.67,
+        "cancellations_number": 196,
+        "delays_number": 932
+    },
+    {
+        "airline": "Singapore Airlines",
+        "cancellations_percentage": 5.17,
+        "delays_percentage": 19.39,
+        "cancellations_number": 77,
+        "delays_number": 1081
+    },
+    {
+        "airline": "Cathay Pacific",
+        "cancellations_percentage": 19.3,
+        "delays_percentage": 4.67,
+        "cancellations_number": 113,
+        "delays_number": 722
+    },
+    {
+        "airline": "Qantas",
+        "cancellations_percentage": 11.46,
+        "delays_percentage": 14.77,
+        "cancellations_number": 151,
+        "delays_number": 1096
+    },
+    {
+        "airline": "Turkish Airlines",
+        "cancellations_percentage": 6.34,
+        "delays_percentage": 16.39,
+        "cancellations_number": 186,
+        "delays_number": 309
+    },
+    {
+        "airline": "Etihad Airways",
+        "cancellations_percentage": 19.96,
+        "delays_percentage": 12.08,
+        "cancellations_number": 180,
+        "delays_number": 1573
+    },
+    {
+        "airline": "Swiss International Air Lines",
+        "cancellations_percentage": 3.2,
+        "delays_percentage": 6.66,
+        "cancellations_number": 119,
+        "delays_number": 248
+    },
+    {
+        "airline": "Air Canada",
+        "cancellations_percentage": 5.72,
+        "delays_percentage": 1.99,
+        "cancellations_number": 105,
+        "delays_number": 1537
+    },
+    {
+        "airline": "Japan Airlines",
+        "cancellations_percentage": 12.35,
+        "delays_percentage": 14.36,
+        "cancellations_number": 92,
+        "delays_number": 1137
+    },
+    {
+        "airline": "All Nippon Airways",
+        "cancellations_percentage": 17.99,
+        "delays_percentage": 12.31,
+        "cancellations_number": 42,
+        "delays_number": 131
+    },
+    {
+        "airline": "Korean Air",
+        "cancellations_percentage": 14.09,
+        "delays_percentage": 9.78,
+        "cancellations_number": 89,
+        "delays_number": 1244
+    },
+    {
+        "airline": "Asiana Airlines",
+        "cancellations_percentage": 3.42,
+        "delays_percentage": 6.54,
+        "cancellations_number": 96,
+        "delays_number": 795
+    },
+    {
+        "airline": "China Southern Airlines",
+        "cancellations_percentage": 0.22,
+        "delays_percentage": 2.33,
+        "cancellations_number": 116,
+        "delays_number": 1421
+    },
+    {
+        "airline": "China Eastern Airlines",
+        "cancellations_percentage": 17.04,
+        "delays_percentage": 4.14,
+        "cancellations_number": 22,
+        "delays_number": 794
+    },
+    {
+        "airline": "Aeroflot",
+        "cancellations_percentage": 13.24,
+        "delays_percentage": 9.0,
+        "cancellations_number": 116,
+        "delays_number": 1316
+    },
+    {
+        "airline": "Aeromexico",
+        "cancellations_percentage": 1.3,
+        "delays_percentage": 16.84,
+        "cancellations_number": 93,
+        "delays_number": 449
+    },
+    {
+        "airline": "LATAM Airlines",
+        "cancellations_percentage": 4.04,
+        "delays_percentage": 9.59,
+        "cancellations_number": 172,
+        "delays_number": 257
+    },
+    {
+        "airline": "Azul Brazilian Airlines",
+        "cancellations_percentage": 3.95,
+        "delays_percentage": 14.85,
+        "cancellations_number": 156,
+        "delays_number": 798
+    },
+    {
+        "airline": "Gol Transportes A\u00e9reos",
+        "cancellations_percentage": 0.44,
+        "delays_percentage": 15.36,
+        "cancellations_number": 115,
+        "delays_number": 486
+    },
+    {
+        "airline": "Volaris",
+        "cancellations_percentage": 1.13,
+        "delays_percentage": 19.74,
+        "cancellations_number": 184,
+        "delays_number": 1889
+    },
+    {
+        "airline": "Ryanair",
+        "cancellations_percentage": 5.32,
+        "delays_percentage": 2.18,
+        "cancellations_number": 18,
+        "delays_number": 3
+    },
+    {
+        "airline": "EasyJet",
+        "cancellations_percentage": 10.83,
+        "delays_percentage": 17.97,
+        "cancellations_number": 166,
+        "delays_number": 1991
+    },
+    {
+        "airline": "Norwegian Air Shuttle",
+        "cancellations_percentage": 1.82,
+        "delays_percentage": 7.18,
+        "cancellations_number": 70,
+        "delays_number": 1097
+    },
+    {
+        "airline": "Finnair",
+        "cancellations_percentage": 7.83,
+        "delays_percentage": 4.5,
+        "cancellations_number": 142,
+        "delays_number": 955
+    },
+    {
+        "airline": "SAS Scandinavian Airlines",
+        "cancellations_percentage": 17.43,
+        "delays_percentage": 0.57,
+        "cancellations_number": 181,
+        "delays_number": 263
+    }
+]

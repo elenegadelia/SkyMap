@@ -21,18 +21,8 @@ const industriesMenu = (
       </Link>
     </Menu.Item>
     <Menu.Item key="3">
-      <Link href="/air-traffic-control" legacyBehavior>
-        <a className={styles.menuItem}>Air Traffic Control</a>
-      </Link>
-    </Menu.Item>
-    <Menu.Item key="4">
       <Link href="/owners-operators" legacyBehavior>
         <a className={styles.menuItem}>Owners and Operators</a>
-      </Link>
-    </Menu.Item>
-    <Menu.Item key="5">
-      <Link href="/government" legacyBehavior>
-        <a className={styles.menuItem}>Government</a>
       </Link>
     </Menu.Item>
   </Menu>
