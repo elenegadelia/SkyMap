@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Input, Menu, Dropdown } from "antd";
 import { SearchOutlined, DownOutlined } from "@ant-design/icons";
 import Link from "next/link";
@@ -153,7 +153,20 @@ const AppMenu = ({ isMobile }) => {
 };
 
 const Header = ({ onLogoClick }) => {
-  const isMobile = typeof window !== "undefined" && window.innerWidth <= 768;
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth <= 768);
+    };
+
+    handleResize(); // Check initial screen size
+    window.addEventListener("resize", handleResize);
+
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
 
   return (
     <div className={styles.header}>
