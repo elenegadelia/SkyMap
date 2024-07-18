@@ -1,0 +1,138 @@
+.pageWrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #f0f0f0;
+  }
+  
+  .header {
+    background-color: #002654;
+    width: 100%;
+  }
+  
+  .container {
+    display: flex;
+    width: 100%;
+    max-width: 1200px;
+    margin-top: 20px;
+  }
+  
+  .mainContent {
+    flex: 2;
+    text-align: center;
+    margin: 0 20px;
+  }
+  
+  .sidePanel {
+    width: 350px;
+    padding: 20px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    overflow-wrap: break-word;
+  }
+  
+  .sidePanel h3 {
+    margin-top: 0;
+  }
+  
+  .sidePanel ul {
+    margin-left: 15px;
+  }
+
+  .sidePanel li {
+    padding: 3px;
+  }
+
+  .youtubeVideoContainer {
+    width: 80%;
+    margin-top: 40px;
+    margin-bottom: 20px;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  
+  .videoContainer {
+    width: 400px;
+    height: 300px;
+    margin-right: 20px;
+    margin-left: -120px; 
+    padding: 0;
+  }
+  
+  .videoElement {
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    padding: 0;
+  }
+  
+  .videoText {
+    text-align: center;
+    color: gray;
+    margin-top: 0;
+  }
+  
+  .selector {
+    margin-bottom: 20px;
+  }
+  
+  .selector label {
+    margin-right: 10px;
+    font-size: 1.2em;
+  }
+  
+  .selector select {
+    padding: 8px;
+    font-size: 1em;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+  }
+
+  .baggageInfo {
+    margin-top: 20px;
+    text-align: left;
+  }
+  
+  .baggageInfo h2 {
+    margin-bottom: 10px;
+    color: #002654;
+  }
+  
+  .baggageInfo p {
+    margin: 8px 0;
+    color: #555;
+  }
+  
+  .baggageInfo p strong {
+    color: #000;
+  }
+  
+  .baggageTips,
+  .baggageServices {
+    margin-top: 40px;
+    text-align: left;
+  }
+  
+  .baggageTips h3,
+  .baggageServices h3 {
+    color: #333;
+  }
+  
+  .baggageTips ul,
+  .baggageServices ul {
+    list-style: disc;
+    margin-left: 20px;
+  }
+  
+  .baggageTips ul li,
+  .baggageServices ul li {
+    margin-bottom: 10px;
+  }
+  
