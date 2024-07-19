@@ -1,0 +1,282 @@
+[
+    {
+        "airport": "Hartsfield\u2013Jackson Atlanta International Airport",
+        "cancellations_percentage": 15.49,
+        "delays_percentage": 8.49,
+        "cancellations_number": 193,
+        "delays_number": 432
+    },
+    {
+        "airport": "Beijing Capital International Airport",
+        "cancellations_percentage": 2.65,
+        "delays_percentage": 15.67,
+        "cancellations_number": 34,
+        "delays_number": 1557
+    },
+    {
+        "airport": "Los Angeles International Airport",
+        "cancellations_percentage": 16.25,
+        "delays_percentage": 15.65,
+        "cancellations_number": 39,
+        "delays_number": 411
+    },
+    {
+        "airport": "Dubai International Airport",
+        "cancellations_percentage": 8.04,
+        "delays_percentage": 1.04,
+        "cancellations_number": 153,
+        "delays_number": 1840
+    },
+    {
+        "airport": "Tokyo Haneda Airport",
+        "cancellations_percentage": 18.22,
+        "delays_percentage": 10.96,
+        "cancellations_number": 141,
+        "delays_number": 1293
+    },
+    {
+        "airport": "O'Hare International Airport",
+        "cancellations_percentage": 14.83,
+        "delays_percentage": 8.57,
+        "cancellations_number": 23,
+        "delays_number": 1949
+    },
+    {
+        "airport": "London Heathrow Airport",
+        "cancellations_percentage": 4.79,
+        "delays_percentage": 15.89,
+        "cancellations_number": 131,
+        "delays_number": 186
+    },
+    {
+        "airport": "Hong Kong International Airport",
+        "cancellations_percentage": 5.54,
+        "delays_percentage": 11.69,
+        "cancellations_number": 161,
+        "delays_number": 213
+    },
+    {
+        "airport": "Shanghai Pudong International Airport",
+        "cancellations_percentage": 3.34,
+        "delays_percentage": 1.85,
+        "cancellations_number": 49,
+        "delays_number": 645
+    },
+    {
+        "airport": "Paris Charles de Gaulle Airport",
+        "cancellations_percentage": 7.22,
+        "delays_percentage": 12.96,
+        "cancellations_number": 4,
+        "delays_number": 1346
+    },
+    {
+        "airport": "Amsterdam Schiphol Airport",
+        "cancellations_percentage": 10.65,
+        "delays_percentage": 7.52,
+        "cancellations_number": 157,
+        "delays_number": 1226
+    },
+    {
+        "airport": "Dallas/Fort Worth International Airport",
+        "cancellations_percentage": 19.6,
+        "delays_percentage": 5.92,
+        "cancellations_number": 31,
+        "delays_number": 1402
+    },
+    {
+        "airport": "Guangzhou Baiyun International Airport",
+        "cancellations_percentage": 16.99,
+        "delays_percentage": 19.71,
+        "cancellations_number": 123,
+        "delays_number": 371
+    },
+    {
+        "airport": "Frankfurt Airport",
+        "cancellations_percentage": 17.49,
+        "delays_percentage": 17.2,
+        "cancellations_number": 10,
+        "delays_number": 1991
+    },
+    {
+        "airport": "Istanbul Airport",
+        "cancellations_percentage": 15.83,
+        "delays_percentage": 11.13,
+        "cancellations_number": 149,
+        "delays_number": 846
+    },
+    {
+        "airport": "Singapore Changi Airport",
+        "cancellations_percentage": 5.3,
+        "delays_percentage": 14.48,
+        "cancellations_number": 174,
+        "delays_number": 1311
+    },
+    {
+        "airport": "Incheon International Airport",
+        "cancellations_percentage": 13.11,
+        "delays_percentage": 17.5,
+        "cancellations_number": 147,
+        "delays_number": 1899
+    },
+    {
+        "airport": "Denver International Airport",
+        "cancellations_percentage": 3.98,
+        "delays_percentage": 16.21,
+        "cancellations_number": 176,
+        "delays_number": 1105
+    },
+    {
+        "airport": "Indira Gandhi International Airport",
+        "cancellations_percentage": 19.46,
+        "delays_percentage": 3.89,
+        "cancellations_number": 83,
+        "delays_number": 1892
+    },
+    {
+        "airport": "Suvarnabhumi Airport",
+        "cancellations_percentage": 11.22,
+        "delays_percentage": 10.82,
+        "cancellations_number": 190,
+        "delays_number": 36
+    },
+    {
+        "airport": "John F. Kennedy International Airport",
+        "cancellations_percentage": 4.84,
+        "delays_percentage": 10.71,
+        "cancellations_number": 104,
+        "delays_number": 1023
+    },
+    {
+        "airport": "San Francisco International Airport",
+        "cancellations_percentage": 1.7,
+        "delays_percentage": 12.5,
+        "cancellations_number": 91,
+        "delays_number": 1985
+    },
+    {
+        "airport": "Kuala Lumpur International Airport",
+        "cancellations_percentage": 17.46,
+        "delays_percentage": 1.21,
+        "cancellations_number": 47,
+        "delays_number": 1384
+    },
+    {
+        "airport": "Madrid-Barajas Airport",
+        "cancellations_percentage": 18.3,
+        "delays_percentage": 5.2,
+        "cancellations_number": 162,
+        "delays_number": 1040
+    },
+    {
+        "airport": "Toronto Pearson International Airport",
+        "cancellations_percentage": 3.79,
+        "delays_percentage": 7.88,
+        "cancellations_number": 68,
+        "delays_number": 1163
+    },
+    {
+        "airport": "Sydney Kingsford Smith Airport",
+        "cancellations_percentage": 8.52,
+        "delays_percentage": 6.33,
+        "cancellations_number": 140,
+        "delays_number": 1430
+    },
+    {
+        "airport": "Barcelona El Prat Airport",
+        "cancellations_percentage": 9.73,
+        "delays_percentage": 0.38,
+        "cancellations_number": 104,
+        "delays_number": 195
+    },
+    {
+        "airport": "Munich Airport",
+        "cancellations_percentage": 12.88,
+        "delays_percentage": 8.26,
+        "cancellations_number": 2,
+        "delays_number": 574
+    },
+    {
+        "airport": "Miami International Airport",
+        "cancellations_percentage": 19.04,
+        "delays_percentage": 9.73,
+        "cancellations_number": 45,
+        "delays_number": 1902
+    },
+    {
+        "airport": "Rome Fiumicino Airport",
+        "cancellations_percentage": 0.1,
+        "delays_percentage": 8.0,
+        "cancellations_number": 64,
+        "delays_number": 1270
+    },
+    {
+        "airport": "Chengdu Shuangliu International Airport",
+        "cancellations_percentage": 9.89,
+        "delays_percentage": 11.84,
+        "cancellations_number": 157,
+        "delays_number": 1398
+    },
+    {
+        "airport": "Soekarno\u2013Hatta International Airport",
+        "cancellations_percentage": 5.66,
+        "delays_percentage": 19.36,
+        "cancellations_number": 2,
+        "delays_number": 33
+    },
+    {
+        "airport": "Boston Logan International Airport",
+        "cancellations_percentage": 5.67,
+        "delays_percentage": 11.13,
+        "cancellations_number": 50,
+        "delays_number": 421
+    },
+    {
+        "airport": "Narita International Airport",
+        "cancellations_percentage": 19.74,
+        "delays_percentage": 4.12,
+        "cancellations_number": 124,
+        "delays_number": 61
+    },
+    {
+        "airport": "George Bush Intercontinental Airport",
+        "cancellations_percentage": 12.67,
+        "delays_percentage": 3.55,
+        "cancellations_number": 148,
+        "delays_number": 780
+    },
+    {
+        "airport": "Seattle-Tacoma International Airport",
+        "cancellations_percentage": 9.14,
+        "delays_percentage": 8.78,
+        "cancellations_number": 82,
+        "delays_number": 51
+    },
+    {
+        "airport": "Minneapolis\u2013Saint Paul International Airport",
+        "cancellations_percentage": 10.9,
+        "delays_percentage": 15.4,
+        "cancellations_number": 18,
+        "delays_number": 223
+    },
+    {
+        "airport": "Detroit Metropolitan Airport",
+        "cancellations_percentage": 3.87,
+        "delays_percentage": 18.66,
+        "cancellations_number": 123,
+        "delays_number": 104
+    },
+    {
+        "airport": "Philadelphia International Airport",
+        "cancellations_percentage": 15.95,
+        "delays_percentage": 1.33,
+        "cancellations_number": 150,
+        "delays_number": 1305
+    },
+    {
+        "airport": "Zurich Airport",
+        "cancellations_percentage": 2.33,
+        "delays_percentage": 10.63,
+        "cancellations_number": 160,
+        "delays_number": 1203
+    }
+]
