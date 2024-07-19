@@ -1,8 +1,15 @@
-import React from 'react';
+'use client'
+import React, { useState } from 'react';
 import styles from './Footer.module.css';
 import Link from 'next/link';
 
 const Footer = () => {
+  const [expandedSection, setExpandedSection] = useState(null);
+
+  const toggleSection = (section) => {
+    setExpandedSection(expandedSection === section ? null : section);
+  };
+
   return (
     <footer className={styles.footer}>
       <div className={styles.footerContainer}>
@@ -17,10 +24,14 @@ const Footer = () => {
             <img src="/images/googlePlay.jpg" alt="Google Play" className={styles.storeButton} />
           </div>
         </div>
-        <div className={styles.column}>
+        <div 
+          className={`${styles.column} ${expandedSection === 'company' ? styles.expanded : ''}`} 
+          data-heading="Company"
+          onClick={() => toggleSection('company')}
+        >
           <h3 className={styles.heading}>Company</h3>
           <ul className={styles.list}>
-          <li><Link href="/about">About</Link></li>
+            <li><Link href="/about">About</Link></li>
             <li><Link href="/careers">Careers</Link></li>
             <li><Link href="/history">History</Link></li>
             <li><Link href="/executive-team">Executive Team</Link></li>
@@ -30,18 +41,26 @@ const Footer = () => {
             <li><Link href="/webinars">Webinars</Link></li>
           </ul>
         </div>
-        <div className={styles.column}>
+        <div 
+          className={`${styles.column} ${expandedSection === 'community' ? styles.expanded : ''}`} 
+          data-heading="Community"
+          onClick={() => toggleSection('community')}
+        >
           <h3 className={styles.heading}>Community</h3>
           <ul className={styles.list}>
             <li><Link href="/photos">Photos</Link></li>
             <li><Link href="/discussions">Discussions</Link></li>
           </ul>
         </div>
-        <div className={styles.column}>
+        <div 
+          className={`${styles.column} ${expandedSection === 'support' ? styles.expanded : ''}`} 
+          data-heading="Support"
+          onClick={() => toggleSection('support')}
+        >
           <h3 className={styles.heading}>Support</h3>
           <ul className={styles.list}>
-          <li><Link href="/contact-us">Contact Us</Link></li>
-          <li><Link href="/faqs">FAQs</Link></li>
+            <li><Link href="/contact-us">Contact Us</Link></li>
+            <li><Link href="/faqs">FAQs</Link></li>
           </ul>
         </div>
       </div>

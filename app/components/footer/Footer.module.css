@@ -20,7 +20,7 @@
 }
 
 .logo {
-  width: 175px; 
+  width: 175px;
 }
 
 .logoText {
@@ -64,7 +64,7 @@
 
 .list li a {
   text-decoration: none;
-  color: black; 
+  color: black;
 }
 
 .list li a:hover {
@@ -90,4 +90,37 @@
 
 .terms a:hover {
   text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+  .footerContainer {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .column {
+    width: 100%;
+    margin-right: 0;
+    margin-top: 10px;
+  }
+
+  .heading {
+    display: none; 
+  }
+
+  .list {
+    display: none; 
+  }
+
+  .column::before {
+    content: attr(data-heading);
+    font-weight: bold;
+    cursor: pointer;
+    display: block;
+    margin-bottom: 10px;
+  }
+
+  .column.expanded .list {
+    display: block; 
+  }
 }
