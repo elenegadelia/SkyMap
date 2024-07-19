@@ -4,7 +4,7 @@ import jessica from '/public/images/team/jessica.jpg';
 import styles from './page.module.css';
 import Header from '../../components/header/Header';
 
-export default function EleneGadelia() {
+export default function Pages() {
     return (
         <div className={styles.pageWrapper}>
             <Header className={styles.header} />
