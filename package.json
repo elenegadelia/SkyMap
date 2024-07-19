@@ -23,7 +23,8 @@
     "react-leaflet-cluster": "^2.1.0",
     "react-leaflet-markercluster": "^3.0.0-rc1",
     "react-lottie": "^1.2.4",
-    "react-responsive-carousel": "^3.2.23"
+    "react-responsive-carousel": "^3.2.23",
+    "react-scroll-parallax": "^3.4.5"
   },
   "devDependencies": {
     "eslint": "^8",

@@ -3,7 +3,7 @@
     flex-direction: column;
     align-items: center;
     min-height: 100vh;
-    background-image: url('/background.jpg'); 
+    background-color: white;
     background-size: cover;
     background-position: center;
 }
@@ -12,7 +12,6 @@
     background-color: white;
     padding: 15px;
     border-radius: 3px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     text-align: center;
     margin: 20px;
 }
@@ -23,17 +22,56 @@
     left: 0;
     width: 100%;
     z-index: 1000;
+    background-color: #002654;
+}
+
+.contentWrapper {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    width: 100%;
+    max-width: 1200px;
+}
+
+.adWrapper { 
+    align-items: left;
+    text-align: left;
+    margin-top: 230px;
+    margin-left: -170px;
+}
+
+.adWrapper p {
+    margin-left: 30px;
+}
+
+.videoElement {
+    width: 400px;
+    height: 600px;
+    border-radius: 10px;
+    padding: 0;
+}
+
+.teamSection {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-left: -150px;
+    margin-bottom: 30px;
 }
 
 .teamContainer {
     text-align: center;
-    
 }
 
 .teamGrid {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    justify-items: center;
+    width: 100%;
+    max-width: 1200px;
+    margin-top: 20px;
 }
 
 .teamMember {
@@ -47,6 +85,10 @@
     cursor: pointer;
     position: relative;
     transition: transform 0.3s ease;
+    text-align: center;
+    width: 200px; /* Set a fixed width */
+    height: 300px; /* Set a fixed height */
+    box-sizing: border-box;
 }
 
 .teamMember:hover {
