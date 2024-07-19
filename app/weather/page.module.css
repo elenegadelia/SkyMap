@@ -1,0 +1,176 @@
+.pageWrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #f0f0f0;
+  }
+  
+  .header {
+    background-color: #002654;
+    width: 100%;
+  }
+  
+  .container {
+    display: flex;
+    width: 100%;
+    max-width: 1200px;
+    margin-top: 20px;
+  }
+  
+  .mainContent {
+    flex: 1;
+    text-align: center;
+    margin: 0 20px; 
+  }
+  
+  .sidePanel {
+    width: 200px;
+    padding: 20px; 
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    overflow-wrap: break-word; 
+  }
+  
+  .sidePanel h3 {
+    margin-top: 0;
+  }
+
+  .sidePanel ul {
+    margin-left: 15px;
+  }
+
+  .sidePanel li {
+    padding: 5px;
+  }
+
+  .adBox {
+    background-color: rgba(255, 255, 255, 0.9); 
+    padding: 20px;
+    border: 2px dashed gray;
+    text-align: center;
+    font-size: 1.5em;
+    color: gray;
+    width: 200px;
+    height: 645px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    z-index: 1;
+    margin-top: 20px;
+  }
+
+  .adContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    margin-bottom: 40px;
+  }
+
+  .adBox::after {
+    content: "For more information contact us on ✉ads@skymap.com";
+    position: absolute;
+    bottom: 20px; 
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 5px;
+    border-radius: 3px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+    white-space: nowrap;
+    z-index: 2;
+    font-size: 0.8em; 
+  }
+  
+  .adBox:hover::after {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  
+  .searchInput {
+    padding: 10px;
+    width: 300px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  .searchButton {
+    padding: 10px 20px;
+    margin-left: 10px;
+    background-color: blue;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 4px;
+  }
+  
+  .searchButton:hover {
+    background-color: darkblue;
+  }
+  
+  .suggestionsList {
+    list-style: none;
+    padding: 0;
+    margin: 10px 0 0 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    max-height: 150px;
+    overflow-y: auto;
+    width: 300px;
+    background-color: white;
+    position: absolute;
+    z-index: 1000;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  
+  .suggestionsList li {
+    padding: 10px;
+    cursor: pointer;
+  }
+  
+  .suggestionsList li:hover {
+    background-color: #f0f0f0;
+  }
+  
+  .weatherContainer {
+    margin-top: 20px;
+  }
+  
+  .weatherCards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+  }
+  
+  .weatherCard {
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    padding: 10px;
+    margin: 10px;
+    width: 150px;
+    text-align: center;
+    background-color: white;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .weatherIcon {
+    width: 50px;
+    height: 50px;
+  }
+
+  .date {
+    text-decoration: underline;
+  }
+  
+  
