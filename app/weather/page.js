@@ -25,14 +25,31 @@ const WeatherPage = () => {
   };
 
   const handleSuggestionClick = async (suggestion) => {
-    setSelectedCity(suggestion.name);
-    setCity(suggestion.name);
-    setSuggestions([]);
+    if (suggestion && suggestion.latitude && suggestion.longitude) {
+      setSelectedCity(suggestion.name);
+      setCity(suggestion.name);
+      setSuggestions([]);
 
-    const response = await axios.get(
-      `https://api.open-meteo.com/v1/forecast?latitude=${suggestion.latitude}&longitude=${suggestion.longitude}&daily=temperature_2m_max,temperature_2m_min,weathercode&timezone=auto`
-    );
-    setWeatherData(response.data);
+      const response = await axios.get(
+        `https://api.open-meteo.com/v1/forecast?latitude=${suggestion.latitude}&longitude=${suggestion.longitude}&daily=temperature_2m_max,temperature_2m_min,weathercode&timezone=auto`
+      );
+      setWeatherData(response.data);
+    } else {
+      console.error("Invalid suggestion data", suggestion);
+    }
+  };
+
+  const handleSearchClick = async () => {
+    if (city) {
+      const foundSuggestion = suggestions.find(
+        (suggestion) => suggestion.name.toLowerCase() === city.toLowerCase()
+      );
+      if (foundSuggestion) {
+        await handleSuggestionClick(foundSuggestion);
+      } else {
+        console.error("City not found in suggestions");
+      }
+    }
   };
 
   return (
@@ -62,7 +79,7 @@ const WeatherPage = () => {
             className={styles.searchInput}
             placeholder="Enter city name"
           />
-          <button onClick={() => handleSuggestionClick({ name: city })} className={styles.searchButton}>
+          <button onClick={handleSearchClick} className={styles.searchButton}>
             Search
           </button>
           {suggestions.length > 0 && (
@@ -95,8 +112,8 @@ const WeatherPage = () => {
           )}
         </div>
         <div className={styles.adBox}>
-            <p>Your ad here</p>
-          </div>
+          <p>Your ad here</p>
+        </div>
       </div>
     </div>
   );

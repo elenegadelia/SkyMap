@@ -8,111 +8,156 @@ import styles from "./Header.module.css";
 
 const { Search } = Input;
 
-const industriesMenu = (
-  <Menu>
-    <Menu.Item key="1">
-      <Link href="./airlines" legacyBehavior>
-        <a className={styles.menuItem}>Airlines</a>
-      </Link>
-    </Menu.Item>
-    <Menu.Item key="2">
-      <Link href="/airports" legacyBehavior>
-        <a className={styles.menuItem}>Airports</a>
-      </Link>
-    </Menu.Item>
-    <Menu.Item key="3">
-      <Link href="/owners-operators" legacyBehavior>
-        <a className={styles.menuItem}>Owners and Operators</a>
-      </Link>
-    </Menu.Item>
-  </Menu>
-);
+const industriesMenu = {
+  items: [
+    {
+      key: "1",
+      label: (
+        <Link href="./airlines" legacyBehavior>
+          <a className={styles.menuItem}>Airlines</a>
+        </Link>
+      ),
+    },
+    {
+      key: "2",
+      label: (
+        <Link href="/airports" legacyBehavior>
+          <a className={styles.menuItem}>Airports</a>
+        </Link>
+      ),
+    },
+    {
+      key: "3",
+      label: (
+        <Link href="/owners-operators" legacyBehavior>
+          <a className={styles.menuItem}>Owners and Operators</a>
+        </Link>
+      ),
+    },
+  ],
+};
 
-const flightTrackingMenu = (
-  <Menu>
-    <Menu.Item key="1">
-      <Link href="/delays-cancellations" legacyBehavior>
-        <a className={styles.menuItem}>Delays and Cancellations</a>
-      </Link>
-    </Menu.Item>
-    <Menu.Item key="2">
-      <Link href="/weather" legacyBehavior>
-        <a className={styles.menuItem}>Weather</a>
-      </Link>
-    </Menu.Item>
-    <Menu.Item key="3">
-      <Link href="/baggage" legacyBehavior>
-        <a className={styles.menuItem}>Baggage Information</a>
-      </Link>
-    </Menu.Item>
-  </Menu>
-);
+const flightTrackingMenu = {
+  items: [
+    {
+      key: "1",
+      label: (
+        <Link href="/delays-cancellations" legacyBehavior>
+          <a className={styles.menuItem}>Delays and Cancellations</a>
+        </Link>
+      ),
+    },
+    {
+      key: "2",
+      label: (
+        <Link href="/weather" legacyBehavior>
+          <a className={styles.menuItem}>Weather</a>
+        </Link>
+      ),
+    },
+    {
+      key: "3",
+      label: (
+        <Link href="/baggage" legacyBehavior>
+          <a className={styles.menuItem}>Baggage Information</a>
+        </Link>
+      ),
+    },
+  ],
+};
 
-const aboutUsMenu = (
-  <Menu>
-    <Menu.Item key="1">
-      <Link href="/about" legacyBehavior>
-        <a className={styles.menuItem}>About</a>
-      </Link>
-    </Menu.Item>
-    <Menu.Item key="2">
-      <Link href="/careers" legacyBehavior>
-        <a className={styles.menuItem}>Careers</a>
-      </Link>
-    </Menu.Item>
-    <Menu.Item key="3">
-      <Link href="/history" legacyBehavior>
-        <a className={styles.menuItem}>History</a>
-      </Link>
-    </Menu.Item>
-    <Menu.Item key="4">
-      <Link href="/executive-team" legacyBehavior>
-        <a className={styles.menuItem}>Executive Team</a>
-      </Link>
-    </Menu.Item>
-    <Menu.Item key="5">
-      <Link href="/blog" legacyBehavior>
-        <a className={styles.menuItem}>Blog</a>
-      </Link>
-    </Menu.Item>
-    <Menu.Item key="6">
-      <Link href="/webinars" legacyBehavior>
-        <a className={styles.menuItem}>Webinars</a>
-      </Link>
-    </Menu.Item>
-    <Menu.Item key="7">
-      <Link href="/advertise" legacyBehavior>
-        <a className={styles.menuItem}>Advertise with Us</a>
-      </Link>
-    </Menu.Item>
-    <Menu.Item key="8">
-      <Link href="/faqs" legacyBehavior>
-        <a className={styles.menuItem}>FAQs</a>
-      </Link>
-    </Menu.Item>
-    <Menu.Item key="9">
-      <Link href="/contact" legacyBehavior>
-        <a className={styles.menuItem}>Contact Us</a>
-      </Link>
-    </Menu.Item>
-  </Menu>
-);
+const aboutUsMenu = {
+  items: [
+    {
+      key: "1",
+      label: (
+        <Link href="/about" legacyBehavior>
+          <a className={styles.menuItem}>About</a>
+        </Link>
+      ),
+    },
+    {
+      key: "2",
+      label: (
+        <Link href="/careers" legacyBehavior>
+          <a className={styles.menuItem}>Careers</a>
+        </Link>
+      ),
+    },
+    {
+      key: "3",
+      label: (
+        <Link href="/history" legacyBehavior>
+          <a className={styles.menuItem}>History</a>
+        </Link>
+      ),
+    },
+    {
+      key: "4",
+      label: (
+        <Link href="/executive-team" legacyBehavior>
+          <a className={styles.menuItem}>Executive Team</a>
+        </Link>
+      ),
+    },
+    {
+      key: "5",
+      label: (
+        <Link href="/blog" legacyBehavior>
+          <a className={styles.menuItem}>Blog</a>
+        </Link>
+      ),
+    },
+    {
+      key: "6",
+      label: (
+        <Link href="/webinars" legacyBehavior>
+          <a className={styles.menuItem}>Webinars</a>
+        </Link>
+      ),
+    },
+    {
+      key: "7",
+      label: (
+        <Link href="/advertise-with-us" legacyBehavior>
+          <a className={styles.menuItem}>Advertise with Us</a>
+        </Link>
+      ),
+    },
+    {
+      key: "8",
+      label: (
+        <Link href="/faqs" legacyBehavior>
+          <a className={styles.menuItem}>FAQs</a>
+        </Link>
+      ),
+    },
+    {
+      key: "9",
+      label: (
+        <Link href="/contact" legacyBehavior>
+          <a className={styles.menuItem}>Contact Us</a>
+        </Link>
+      ),
+    },
+  ],
+};
 
 const AppMenu = ({ isMobile }) => {
   if (isMobile) {
     return (
       <div className={styles.mobileMenu}>
-        <Dropdown overlay={industriesMenu} trigger={["click"]}>
+        <Dropdown menu={industriesMenu} trigger={["click"]}>
           <a onClick={(e) => e.preventDefault()} className={styles.menuItem}>
             Industries <DownOutlined />
           </a>
         </Dropdown>
-        <Dropdown overlay={flightTrackingMenu} trigger={["click"]}>
+        <Dropdown menu={flightTrackingMenu} trigger={["click"]}>
           <a onClick={(e) => e.preventDefault()} className={styles.menuItem}>
             Flight Tracking <DownOutlined />
           </a>
         </Dropdown>
-        <Dropdown overlay={aboutUsMenu} trigger={["click"]}>
+        <Dropdown menu={aboutUsMenu} trigger={["click"]}>
           <a onClick={(e) => e.preventDefault()} className={styles.menuItem}>
             About Us <DownOutlined />
           </a>
@@ -123,17 +168,17 @@ const AppMenu = ({ isMobile }) => {
 
   return (
     <div className={styles.menu}>
-      <Dropdown overlay={industriesMenu} trigger={["hover"]}>
+      <Dropdown menu={industriesMenu} trigger={["hover"]}>
         <a onClick={(e) => e.preventDefault()} className={styles.menuItem}>
           Industries <DownOutlined className={styles.arrowIcon} />
         </a>
       </Dropdown>
-      <Dropdown overlay={flightTrackingMenu} trigger={["hover"]}>
+      <Dropdown menu={flightTrackingMenu} trigger={["hover"]}>
         <a onClick={(e) => e.preventDefault()} className={styles.menuItem}>
           Flight Tracking <DownOutlined className={styles.arrowIcon} />
         </a>
       </Dropdown>
-      <Dropdown overlay={aboutUsMenu} trigger={["hover"]}>
+      <Dropdown menu={aboutUsMenu} trigger={["hover"]}>
         <a onClick={(e) => e.preventDefault()} className={styles.menuItem}>
           About Us <DownOutlined className={styles.arrowIcon} />
         </a>
