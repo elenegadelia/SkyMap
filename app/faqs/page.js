@@ -1,4 +1,3 @@
-// faqs/page.js
 'use client'
 import React, { useState } from 'react';
 import styles from './page.module.css';

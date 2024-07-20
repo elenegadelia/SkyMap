@@ -1,5 +1,3 @@
-/* contact-us/page.module.css */
-
 .contactPage {
     font-family: Arial, sans-serif;
 }
@@ -63,10 +61,10 @@
 
 .chatBox {
     position: fixed;
-    bottom: 60px; /* Adjusted to move it higher */
+    bottom: 60px; 
     right: 20px;
     width: 350px;
-    height: 450px; /* Increased height */
+    height: 450px; 
     border: 1px solid #ccc;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0,0,0,0.1);
@@ -100,8 +98,8 @@
 .chatBody {
     padding: 10px;
     font-size: 14px;
-    flex-grow: 1; /* Allow the body to grow */
-    overflow-y: auto; /* Add scroll if content overflows */
+    flex-grow: 1;
+    overflow-y: auto; 
 }
 
 .message {

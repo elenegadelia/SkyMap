@@ -1,5 +1,3 @@
-// faqs/faqData.js
-
 const faqData = [
     {
         section: "SkyMap",
