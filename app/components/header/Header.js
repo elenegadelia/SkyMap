@@ -61,37 +61,22 @@ const aboutUsMenu = (
       </Link>
     </Menu.Item>
     <Menu.Item key="3">
-      <Link href="/history" legacyBehavior>
-        <a className={styles.menuItem}>History</a>
-      </Link>
-    </Menu.Item>
-    <Menu.Item key="4">
       <Link href="/executive-team" legacyBehavior>
         <a className={styles.menuItem}>Executive Team</a>
       </Link>
     </Menu.Item>
-    <Menu.Item key="5">
-      <Link href="/blog" legacyBehavior>
-        <a className={styles.menuItem}>Blog</a>
-      </Link>
-    </Menu.Item>
-    <Menu.Item key="6">
-      <Link href="/webinars" legacyBehavior>
-        <a className={styles.menuItem}>Webinars</a>
-      </Link>
-    </Menu.Item>
-    <Menu.Item key="7">
-      <Link href="/advertise" legacyBehavior>
+    <Menu.Item key="4">
+      <Link href="/advertise-with-us" legacyBehavior>
         <a className={styles.menuItem}>Advertise with Us</a>
       </Link>
     </Menu.Item>
-    <Menu.Item key="8">
+    <Menu.Item key="5">
       <Link href="/faqs" legacyBehavior>
         <a className={styles.menuItem}>FAQs</a>
       </Link>
     </Menu.Item>
-    <Menu.Item key="9">
-      <Link href="/contact" legacyBehavior>
+    <Menu.Item key="6">
+      <Link href="/contact-us" legacyBehavior>
         <a className={styles.menuItem}>Contact Us</a>
       </Link>
     </Menu.Item>

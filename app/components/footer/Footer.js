@@ -33,12 +33,9 @@ const Footer = () => {
           <ul className={styles.list}>
             <li><Link href="/about">About</Link></li>
             <li><Link href="/careers">Careers</Link></li>
-            <li><Link href="/history">History</Link></li>
             <li><Link href="/executive-team">Executive Team</Link></li>
             <li><Link href="/advertise-with-us">Advertise with Us</Link></li>
             <li><Link href="/newsroom">Newsroom</Link></li>
-            <li><Link href="/blog">Blog</Link></li>
-            <li><Link href="/webinars">Webinars</Link></li>
           </ul>
         </div>
         <div 
@@ -49,7 +46,6 @@ const Footer = () => {
           <h3 className={styles.heading}>Community</h3>
           <ul className={styles.list}>
             <li><Link href="/photos">Photos</Link></li>
-            <li><Link href="/discussions">Discussions</Link></li>
           </ul>
         </div>
         <div 
