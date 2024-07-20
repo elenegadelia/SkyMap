@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Input, Menu, Dropdown } from "antd";
 import { SearchOutlined, DownOutlined } from "@ant-design/icons";
 import Link from "next/link";
@@ -21,18 +21,8 @@ const industriesMenu = (
       </Link>
     </Menu.Item>
     <Menu.Item key="3">
-      <Link href="/air-traffic-control" legacyBehavior>
-        <a className={styles.menuItem}>Air Traffic Control</a>
-      </Link>
-    </Menu.Item>
-    <Menu.Item key="4">
       <Link href="/owners-operators" legacyBehavior>
         <a className={styles.menuItem}>Owners and Operators</a>
-      </Link>
-    </Menu.Item>
-    <Menu.Item key="5">
-      <Link href="/government" legacyBehavior>
-        <a className={styles.menuItem}>Government</a>
       </Link>
     </Menu.Item>
   </Menu>
@@ -46,13 +36,13 @@ const flightTrackingMenu = (
       </Link>
     </Menu.Item>
     <Menu.Item key="2">
-      <Link href="/search-flights" legacyBehavior>
-        <a className={styles.menuItem}>Search Flights</a>
+      <Link href="/weather" legacyBehavior>
+        <a className={styles.menuItem}>Weather</a>
       </Link>
     </Menu.Item>
     <Menu.Item key="3">
-      <Link href="/other" legacyBehavior>
-        <a className={styles.menuItem}>Other</a>
+      <Link href="/baggage" legacyBehavior>
+        <a className={styles.menuItem}>Baggage Information</a>
       </Link>
     </Menu.Item>
   </Menu>
@@ -153,7 +143,20 @@ const AppMenu = ({ isMobile }) => {
 };
 
 const Header = ({ onLogoClick }) => {
-  const isMobile = typeof window !== "undefined" && window.innerWidth <= 768;
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth <= 768);
+    };
+
+    handleResize(); // Check initial screen size
+    window.addEventListener("resize", handleResize);
+
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
 
   return (
     <div className={styles.header}>

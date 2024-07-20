@@ -1,0 +1,53 @@
+.container {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+  background-color: white;
+  background-size: cover;
+  background-position: center;
+}
+
+.header {
+  background-color: rgb(6, 6, 68);
+  width: 100%;
+}
+
+.label {
+  margin-right: 10px;
+}
+
+.select {
+  padding: 5px;
+  font-size: 16px;
+  margin-bottom: 10px;
+  border-radius: 3px;
+}
+
+.carouselContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-top: 20px;
+}
+
+.carouselSection {
+  flex: 1;
+  margin: 0 10px;
+  text-align: center;
+}
+
+.title {
+  margin-bottom: 10px;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.img {
+  width: auto;
+  max-height: 500px;
+  margin: 0 auto;
+  border-radius: 15px;
+}
+
