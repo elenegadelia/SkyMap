@@ -20,7 +20,7 @@
     "DL1600": {
       "flightNumber": "DL1600",
       "status": "Cancelled",
-      "duration": 5,
+      "duration": 3,
       "departure": {
         "time": 1719478571,
         "city": "Seattle",
@@ -38,7 +38,7 @@
     "AA1700": {
       "flightNumber": "AA1700",
       "status": "On Time",
-      "duration": 4,
+      "duration": 2.5,
       "departure": {
         "time": 1719479571,
         "city": "Houston",
@@ -56,7 +56,7 @@
     "AF1800": {
       "flightNumber": "AF1800",
       "status": "Delayed",
-      "duration": 7,
+      "duration": 4,
       "departure": {
         "time": 1719480571,
         "city": "Paris",
@@ -92,7 +92,7 @@
     "BA2000": {
       "flightNumber": "BA2000",
       "status": "On Time",
-      "duration": 9,
+      "duration": 2.5,
       "departure": {
         "time": 1719482571,
         "city": "London",
@@ -110,7 +110,7 @@
     "EK2100": {
       "flightNumber": "EK2100",
       "status": "Delayed",
-      "duration": 11,
+      "duration": 8,
       "departure": {
         "time": 1719483571,
         "city": "Dubai",
